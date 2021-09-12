@@ -7,12 +7,117 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:drawableLeft="@drawable/arrow_back"
+        android:drawableRight="@drawable/alarm"
+        android:drawableTint="@color/black"
+        android:text="Вкл./ выкл. интернет"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_rectangle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#D8D8D8"
+        app:layout_constraintTop_toBottomOf="@+id/text_internet" />
+
+    <TextView
+        android:id="@+id/text_street"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Ул. Братьев Кашириных, д.№ 1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/image_rectangle"
+        app:layout_constraintTop_toTopOf="@id/image_rectangle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="кв. 25"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/text_street"
+        app:layout_constraintTop_toTopOf="@id/image_rectangle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Интернет"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/image_rectangle"
+        app:layout_constraintTop_toTopOf="@id/text_street" />
+
+    <ImageView
+        android:id="@+id/image_power"
+        android:layout_width="162dp"
+        android:layout_height="163dp"
+        android:background="#2e3ca3"
+        android:src="@drawable/power"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_rectangle"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <TextView
+        android:id="@+id/text_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Функция деактивирована"
+        android:textColor="#2e3ca3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_power" />
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_function"
+        android:text="Отключайте домашний Интернет в один клик из любой точки планеты и контролируйте доступ устройств к сети"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:padding="8dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_info"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:text="Владелец договора может выдать другим людям доступ на управление интернетом"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
